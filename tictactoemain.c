@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
     }
     else if (selector == chess)
     {
-    }
+        }
     else if (selector == credit)
     {
         creditpagesec();
