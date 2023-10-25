@@ -10,6 +10,7 @@
 #include "sdlevent.h"
 #include "sdlrender.h"
 #include "starter.h"
+#include "credit.h"
 
 int screen_state;
 int current_player;
@@ -18,7 +19,8 @@ int play_mode; // single or double player
 int main(int argc, char *argv[])
 {
     /* Initialize the game board */
-    if (starter() == tictactoe)
+    int selector = starter();
+    if (selector == tictactoe)
     {
         int arr[9] = {BLANK, BLANK, BLANK,
                       BLANK, BLANK, BLANK,
@@ -96,6 +98,13 @@ int main(int argc, char *argv[])
         SDL_DestroyRenderer(renderer);
         SDL_DestroyWindow(window);
         SDL_Quit();
+    }
+    else if (selector == chess)
+    {
+    }
+    else if (selector == credit)
+    {
+        creditpagesec();
     }
 
     return 0;

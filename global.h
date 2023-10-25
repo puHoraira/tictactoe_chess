@@ -10,7 +10,8 @@ enum
     X,
     O,
     tictactoe,
-    chess
+    chess,
+    credit
 };
 
 enum

@@ -27,9 +27,15 @@ int checkWinner(int arr[])
         if (arr[i] != BLANK && arr[i] == arr[i + 1] && arr[i] == arr[i + 2])
         {
             if (arr[i] == X)
+            {
+                printf("F1");
                 return PLAYER_X;
+            }
             else
+            {
+                printf("%dF2\n", i);
                 return PLAYER_O;
+            }
         }
     }
 
@@ -39,9 +45,15 @@ int checkWinner(int arr[])
         if (arr[j] != BLANK && arr[j] == arr[j + 3] && arr[j] == arr[j + 6])
         {
             if (arr[j] == X)
+            {
+                printf("F3");
                 return PLAYER_X;
+            }
             if (arr[j] == O)
+            {
+                printf("F4");
                 return PLAYER_O;
+            }
         }
     }
 
@@ -49,16 +61,28 @@ int checkWinner(int arr[])
     if (arr[0] != BLANK && arr[0] == arr[4] && arr[0] == arr[8])
     {
         if (arr[0] == X)
+        {
+            printf("F5");
             return PLAYER_X;
+        }
         if (arr[0] == O)
+        {
+            printf("F6");
             return PLAYER_O;
+        }
     }
     if (arr[2] != BLANK && arr[2] == arr[4] && arr[2] == arr[6])
     {
         if (arr[2] == X)
+        {
+            printf("F7");
             return PLAYER_X;
+        }
         if (arr[2] == O)
+        {
+            printf("F8");
             return PLAYER_O;
+        }
     }
 
     /* Check if the game is finished or not

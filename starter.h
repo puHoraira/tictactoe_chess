@@ -2,7 +2,6 @@
 #define SDL_STARTER_H
 
 void initSDL();
-void renderButtons();
 int starter();
 
 #endif
